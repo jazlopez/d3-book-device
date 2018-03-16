@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<style>
+
+    * {
+        font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue","Helvetica","Roboto","Segoe UI","Arial","sans-serif";
+        color: #333;
+    }
+
+    body {
+        width: 1400px;
+    }
+
+    header {
+        font-size: 28px;
+        line-height: 30px;
+
+    }
+    h1 {
+        position: absolute;
+        top: 500px;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        text-align: center;
+        width: 960px;
+    }
+
+    table {
+
+        font-size: 12px;
+    }
+
+    table thead th {
+        padding: 4px !important;
+    }
+
+    code {
+        font-family: "Andale Mono";
+        font-size: 11px;
+        background: #ddd;
+        padding: 12px;
+        color: #333;
+    }
+    .separator {
+        height: 25px;
+    }
+
+    h3 {
+        border-bottom:1px solid red;
+    }
+
+    ul#filters li {
+        list-style-type: none;
+    }
+
+    .map-banner {
+
+        background: linear-gradient(to bottom,#f3f3f3,#fff);
+        border: 8px solid #f3f3f3;
+        border-radius: 4px;
+        width: 120px;
+        position: absolute;
+        height: 150px;
+        padding: 4px;
+        font-size: 9px;
+    }
+
+    #left-review {
+        top: 320px;
+        left: 505px;
+    }
+
+    #right-review {
+        top: 320px;
+        left: 780px;
+    }
+
+    .cytometer-icon {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+    }
+
+    #cytometer-top-left {
+
+        top: 400px;
+        left: 650px;
+    }
+
+    #cytometer-middle-button {
+        top: 420px;
+        left: 700px;
+    }
+
+    #cytometer-middle-right-button {
+        top: 420px;
+        left: 750px;
+    }
+
+    #cytometer-top-right {
+        top: 385px;
+        left: 680px;
+    }
+
+</style>
+<body>
+
+<div class="container-fluid">
+<div class="row">
+        <div class="col-sm-8">
+            <br/>
+        </div>
+
+        <div class="col-sm-4 text-right">
+
+            <h4>
+                Book Device Platform
+            </h4>
+
+        </div>
+</div>
+</div>
+
+<hr/>
+
+
+<div class="container-fluid" style="width: 1400px;">
+    <div class="row">
+        <div class="col-sm-4">
+
+            <h3 class="text-right">
+                Device Search
+            </h3>
+            <br/>
+
+            <div class="container">
+                <input type="text" class="form-control form-control-sm" placeholder="Search Device(s)...">
+            </div>
+
+            <br/>
+
+            <div class="container">
+
+                <div class="row">
+
+                    <ul id="filters">
+
+                        <li>
+
+                            <input type="radio" id="cyto" >&nbsp;Use your current location
+                                <br/>
+                                <div><small><i>Los Angeles, CA, US</i></small></div>
+                            <br/>
+
+                        </li>
+                        <li>
+                            <input type="radio" id="cyto" >
+                            <input type="text" placeholder="Enter new location...">
+                        </li>
+                        <li>
+
+
+                        </li>
+                    </ul>
+                    <div class="col-sm-12">
+
+
+                    </div>
+                    <div class="col-sm-6">
+
+
+                        <div class="form-group">
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+            <br/>
+
+            <div class="separator">
+
+
+            </div>
+
+            <div id="results">
+
+                <table class="table">
+                    <caption>Click here for more results... </caption>
+                    <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Rank #</th>
+                        <th scope="col">Book Device</th>
+                        <th scope="col">Device Owner</th>
+                        <th scope="col">Review</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td><a href="#">Book now</a></td>
+                        <td>Ipsum</td>
+                        <td>5/5</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td><a href="#">Nov. 2018</a></td>
+                        <td>Lorum</td>
+                        <td>5/5</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td><a href="#">Nov. 2019</a></td>
+                        <td>Factum</td>
+                        <td>5/5</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td><a href="#">Book now</a></td>
+                        <td>Ipsum</td>
+                        <td>5/5</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td><a href="#">Nov. 2018</a></td>
+                        <td>Lorum</td>
+                        <td>5/5</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td><a href="#">Nov. 2019</a></td>
+                        <td>Factum</td>
+                        <td>5/5</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="col-sm-5">
+            <h3 class="text-right">
+                Device Geo Map Search
+            </h3>
+
+            <div id="world-map" class="row"></div>
+
+            <div class="container text-center">
+                <h6>Narrow your search range (mi.) </h6>
+                <div class="col-sm-12">
+                    <input id="range" class="form-control form-control-sm" type="range" value="50" max="100">
+                </div>
+            </div>
+
+        </div>
+
+        <div id="about" class="col-sm-3">
+
+            <div class="container">
+                <h3 class="text-right">About</h3>
+                <div class="row">
+            <code>
+                <p><b>Scientific devices lease/rental platform</b></p>
+
+                <p><b>Problem</b></p>
+                <p>Scientist may encounter at some part of their research the need to run an experiment that needs a specific device the University or Company he works with does not have and can’t be afford.</p>
+
+                <p><b>Solution</b></p>
+                <p>Our solutions consist in developing an application that allows the owners of scientific devices to put their assets in lease. Scientist will search for the device based on the experiment he needs to execute, the availability of the device and how far he is from the device location. Once the scientist has found the desired device, he will book the time needed to run their experiment. The scientist can also acquire any consumable he may need to run the experiment and take any training course needed to run the device.</p>
+
+                <p><b>Business Impact</b></p>
+                <ul>
+                    <li>ThermoFisher will act as a broker, charging a fee per rent.</li>
+                    <li>Collaboration between scientists of different institutions is promoted.</li>
+                    <li>Scientist are no longer constrained by the devices they have access to.</li>
+                    <li>As more experiments are executed in a device, owners will consume more often ThermoFisher consumables.</li>
+                    <li>As scientist may need to use a device they are not familiar with, ThermoFisher training courses will be consumed by them.</li>
+                </ul>
+            </code>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="left-review" class="map-banner">
+
+        <h6>Device Works</h6>
+        <p>
+            I worked on site with a device these a year ago in September of 2016. We are in Houston, and a year later ... <a href="#">Read more ...</a>
+        </p>
+    </div>
+
+    <div id="right-review" class="map-banner">
+
+        <h6>Device Works</h6>
+        <p>
+            I worked on site with a device these a year ago in September of 2016. We are in Houston, and a year later ... <a href="#">Read more ...</a>
+        </p>
+    </div>
+
+    <img id="cytometer-top-left" class="cytometer-icon" src="icons/cytometer.png"/>
+
+    <img id="cytometer-top-right" class="cytometer-icon" src="icons/cytometer.png"/>
+
+    <img id="cytometer-middle-button" class="cytometer-icon" src="icons/cytometer.png"/>
+
+    <img id="cytometer-middle-right-button" class="cytometer-icon" src="icons/cytometer.png"/>
+
+
+
+
+
+
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script src="//d3js.org/queue.v1.min.js"></script>
+<script src="//d3js.org/topojson.v1.min.js"></script>
+<script>
+
+    var width = 480,
+        height = 480;
+
+    var projection = d3.geo.orthographic()
+        .translate([width / 2, height / 2])
+        .scale(width / 2 - 20)
+        .clipAngle(90)
+        .precision(0.6);
+
+    var canvas = d3.select("#world-map").append("canvas")
+        .attr("width", width)
+        .attr("height", height);
+
+    var c = canvas.node().getContext("2d");
+
+    var path = d3.geo.path()
+        .projection(projection)
+        .context(c);
+
+    var title = d3.select("h1");
+
+    queue()
+        .defer(d3.json, "world-110m.json")
+        .defer(d3.tsv, "world-country-names.tsv")
+        .await(ready);
+
+    function ready(error, world, names) {
+        if (error) throw error;
+
+        var globe = {type: "Sphere"},
+            land = topojson.feature(world, world.objects.land),
+            countries = topojson.feature(world, world.objects.countries).features,
+            borders = topojson.mesh(world, world.objects.countries, function(a, b) { return a !== b; }),
+            i = -1,
+            n = countries.length;
+
+        countries = countries.filter(function(d) {
+            return names.some(function(n) {
+                if (d.id == n.id) return d.name = n.name;
+            });
+        }).sort(function(a, b) {
+            return a.name.localeCompare(b.name);
+        });
+
+        (function transition() {
+            d3.transition()
+                .duration(1250)
+                .each("start", function() {
+                    title.text(countries[i = (i + 1) % n].name);
+                })
+                .tween("rotate", function() {
+                    var p = d3.geo.centroid(countries[i]),
+                        r = d3.interpolate(projection.rotate(), [-p[0], -p[1]]);
+                    return function(t) {
+                        projection.rotate(r(t));
+                        c.clearRect(0, 0, width, height);
+                        c.fillStyle = "#ccc", c.beginPath(), path(land), c.fill();
+                        c.fillStyle = "#f00", c.beginPath(), path(countries[i]), c.fill();
+                        c.strokeStyle = "#fff", c.lineWidth = .5, c.beginPath(), path(borders), c.stroke();
+                        c.strokeStyle = "#000", c.lineWidth = 2, c.beginPath(), path(globe), c.stroke();
+                    };
+                })
+                .transition()
+                .each("end", transition);
+        })();
+    }
+
+    d3.select(self.frameElement).style("height", height + "px");
+
+</script>
+</body>
